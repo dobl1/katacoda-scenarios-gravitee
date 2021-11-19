@@ -1,0 +1,54 @@
+{
+  "title": "Gravitee Demo",
+  "description": "Run a Gravitee demo environment",
+  "difficulty": "Easy",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Check docker is installed and running",
+        "text": "step1.md"
+      },
+      {
+        "title": "Download and run latest Gravitee docker-compose file",
+        "text": "step2.md",
+        "courseData": "env-step-2.sh"
+      },
+      {
+        "title": "Accéder à Gravitee",
+        "text": "step3.md",
+        "courseData": "env-step-3.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "env-init.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "petstore.yaml",
+          "target": "~/"
+        },
+        {
+          "file": "petstore.json",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "hidefinish": true,
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "dashboards": [{"name": "Management UI", "port": 8084}, {"name": "Dev Portal", "port": 8085}],
+    "uilayout": "vscode-terminal-split"
+  },
+  
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
